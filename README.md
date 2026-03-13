@@ -1,4 +1,4 @@
-# Torna & Talaşlı İmalat Atölyesi Web Projesi
+# Günaydın Torna Web Sitesi Projesi
 
 Bu proje, bir torna atölyesinin dijital dünyadaki varlığını oluşturmak, sunduğu hizmetleri tanıtmak ve potansiyel müşterilerle iletişim kurmak amacıyla geliştirilmiştir.
 
