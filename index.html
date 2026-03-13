@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Günaydın Torna</title>
+    <!-- CSS bağlantısını style.css olarak güncelledik -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN (Hamburger ikonu için) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="imgs/logo.png" alt="logo" />
+      </a>
+      <nav class="navbar">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="projects.html">Projelerimiz</a>
+        <a href="#">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+      </nav>
+      <!-- Menü Butonu (Hamburger İkonu) Eklendi -->
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <!-- header end -->
+
+    <!-- homestart -->
+    <section class="home">
+      <video
+        class="home-video"
+        src="imgs/fixed_video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <div class="content">
+        <h3>Günaydın Torna</h3>
+        <p>1930'Dan Beri Demirciliğin Adresi</p>
+        <a class="btn" href="#">Bize Ulaşın</a>
+      </div>
+    </section>
+    <!-- home end -->
+
+    <!-- service section start -->
+    <section class="service-section" id="services">
+      <h3>Hizmetlerimiz</h3>
+      <!-- 1 krom 2 gezer vinç 3 flanş 4 torna 5 ferforçe 6 bakım-->
+      <!-- HİZMET 5: PASLANMAZ KROM İŞLEMLERİ -->
+      <div class="combined-service box-content show">
+        <div class="service-description-box">
+          <p>
+            Korozyona dayanıklı paslanmaz çelik (krom) malzemelerin kaynak ve
+            işleme taleplerini hijyen ve dayanıklılık gerektiren sektörler için
+            özel olarak karşılıyoruz.
+          </p>
+        </div>
+        <div class="service-box">
+          <img src="/imgs/krom.jpg" alt="Paslanmaz Krom İşlemleri Görseli" />
+          <div class="service-text-overlay">
+            <p>Paslanmaz Krom İşlemleri</p>
+          </div>
+        </div>
+      </div>
+      <!-- HİZMET 2 :GEZER VİNÇ -->
+      <div class="combined-service box-content reverse">
+        <div class="service-box">
+          <img src="/imgs/vinc.jpg" alt="vinç görseli" />
+          <div class="service-text-overlay">
+            <p>Gezer Köprülü Vinç Sistemi Kurulumu</p>
+          </div>
+        </div>
+        <div class="service-description-box">
+          <p>
+            Endüstriyel tesisler için özel olarak tasarlanmış, güvenli ve yüksek
+            kaldırma kapasiteli gezer köprülü vinç sistemleri üretiyor ve
+            montajını anahtar teslim gerçekleştiriyoruz.
+          </p>
+        </div>
+      </div>
+      <!-- HİZMET 3: FLANŞLI VANA MONTAJI (Ters sıra) -->
+      <div class="combined-service box-content show">
+        <div class="service-description-box">
+          <p>
+            Endüstriyel tesisler ve boru hatları için kritik öneme sahip olan
+            vana montaj işlemlerini standartlara uygun ve sızdırmazlık
+            garantisiyle yapmaktayız.
+          </p>
+        </div>
+        <div class="service-box">
+          <img src="/imgs/flans.jpg" alt="Flanşlı Vana Montajı Görseli" />
+          <div class="service-text-overlay">
+            <p>Flanşlı Vana Montajı</p>
+          </div>
+        </div>
+      </div>
+      <!-- HİZMET 4: TORNA İŞLEMLERİ -->
+      <div class="combined-service box-content reverse">
+        <div class="service-box">
+          <img src="/imgs/tornak.jpg" alt="Torna İşlemleri Görseli" />
+          <div class="service-text-overlay">
+            <p>Torna İşlemleri</p>
+          </div>
+        </div>
+        <div class="service-description-box">
+          <p>
+            Parçaların istenen hassasiyette ve kalitede işlenmesini sağlayan
+            temel hizmetimizdir. Yüksek teknoloji torna tezgahlarımızla en
+            karmaşık projelerinizi bile başarıyla tamamlıyoruz.
+          </p>
+        </div>
+      </div>
+      <!-- HİZMET 5: FERFORJE -->
+      <div class="combined-service box-content show">
+        <div class="service-description-box">
+          <p>
+            Sanatsal ve mimari metal işçiliği alanında, özgün tasarımlarla
+            ferforje kapı, pencere, korkuluk ve çit imalatı yapıyoruz.
+          </p>
+        </div>
+        <div class="service-box">
+          <img src="/imgs/perforje.jpg" alt="Perforje Görseli" />
+          <div class="service-text-overlay">
+            <p>Ferforje</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HİZMET 6: MAKİNE BAKIM ONARIM (Ters sıra) -->
+      <div class="combined-service box-content reverse">
+        <div class="service-box">
+          <img src="/imgs/bakım.jpg" alt="Makine Bakım Onarım Görseli" />
+          <div class="service-text-overlay">
+            <p>Makine Bakım Onarım</p>
+          </div>
+        </div>
+        <div class="service-description-box">
+          <p>
+            Sanayi makinelerinizin ömrünü uzatmak ve verimliliğini artırmak için
+            periyodik bakım ve arıza onarım hizmetleri sunuyoruz.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- service section end -->
+    <footer>
+      <div class="footer-content">
+        <div class="col footer-logo"><img src="/imgs/logo.png" alt="" /></div>
+      </div>
+      <div>
+        <p>copyright 2026 Günaydın Torna - Developed By Burak Kaan Gök</p>
+      </div>
+    </footer>
+
+    <!-- script.js dosyasını bağladık -->
+    <script src="script.js"></script>
+  </body>
+</html>

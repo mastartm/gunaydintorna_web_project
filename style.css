@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap");
+:root {
+  --primary-color: #072883; /* Ana Mavi renk */
+  --secondary-color: #123e1b; /* Ana Yeşil renk */
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --light-bg: #f0f0f0;
+}
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize; /* Tüm geçişleri yavaşlattık */
+  transition: all 0.3s ease; /* bunu videoda kullanacaksın */
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+body {
+  background: silver;
+}
+section {
+  padding: 5rem 7%;
+}
+.logo img {
+  height: 5rem;
+  border-radius: 30rem;
+} /* !header start */
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  margin: 2rem 7%;
+  border-radius: 30rem;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.75); /* navbarın sayfayı sürüklesek bile aşağıya doğru inmesini sağlar */
+  position: sticky;
+  top: 0; /* navbarın öncelikli olarak görünmesini sağlar */
+  z-index: 1000;
+}
+.header .navbar a {
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
+  color: black;
+  border-bottom: 0.2rem solid transparent;
+}
+.header .navbar .active,
+.header .navbar a:hover {
+  border-color: red;
+  padding-bottom: 0.5rem;
+}
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: none; /* Büyük ekranda gizli */
+} /* !header end */ /* !home start */
+.home {
+  min-height: 100vh; /* Arka planı tam ekran yapmak için min-height'ı 100vh'ye çıkarmanız iyi olur. */ /* min-width: 100%; */
+  position: relative; /* İçindeki videoyu konumlandırmak için gereklidir */
+  overflow: hidden; /* Video konteyner dışına taşarsa gizler */ /* background: url(./imgs/fixed_video.mp4); */
+  background-size: cover;
+  background-position: center;
+  margin-top: -14.31rem;
+  display: flex;
+  align-items: center;
+}
+.home-video {
+  position: absolute; /* .home div'ine göre konumlanır */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  z-index: -1; /* Videoyu diğer içeriğin arkasına gönderir */
+  object-fit: cover; /* düzenlenebilir */
+}
+.home .content {
+  max-width: 60rem;
+  margin-left: 10%;
+  z-index: 1;
+  text-align: left;
+}
+.home .content h3 {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+.home .content p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #c9c9c9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+.home .content .btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  font-size: 1.8rem;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  text-transform: none;
+  transition: background 0.3s ease;
+}
+.home .content .btn:hover {
+  background: red;
+  letter-spacing: 0.1rem;
+} /* service section */
+.service-section {
+  /* display: block varsayılan değerdir ancak emin olmak için belirtilebilir */ /* font-size: 7rem; */ /* display: block; */ /* position: relative; */ /* overflow: hidden; */
+  padding: 8rem 0; /* İçindeki .service-box'ları yatayda (sayfanın merkezine) hizalar */ /* text-align: center; */
+  background-color: silver;
+}
+.service-section h3 {
+  font-size: 4rem;
+  color: black;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-weight: 700; /* text-transform: uppercase; */
+}
+.combined-service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 60px auto;
+  background-color: white;
+  border-radius: 12px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Animasyon Başlangıç Ayarları */
+  opacity: 0;
+  transform: translateX(-100%); /* Varsayılan: Soldan gelmek için solda gizli */
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Yumuşak ve profesyonel bir geçiş */
+} /* TERS SIRA (Sağdan Gelenler) Animasyon Başlangıcı */
+.combined-service.reverse {
+  flex-direction: row-reverse;
+  transform: translateX(100%); /* Sağdan gelmek için sağda gizli */
+} /* GÖRÜNÜR DURUM */
+.combined-service.show {
+  transform: translateX(0); /* Normal pozisyonuna geri döner */
+  opacity: 1; /* Görünür hale gelir */
+} /* --- İÇ KUTU STİLLERİ --- */ /* Açıklama Kutusu Stili */
+.service-description-box {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  min-height: 350px;
+  background-color: #f8f8f8;
+  text-align: left;
+}
+.service-description-box p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #333;
+  text-transform: none;
+  font-weight: 400;
+}
+.service-description-box p strong {
+  color: var(--primary-color);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+} /* 2. Servis Kutuları (.service-box) Ayarları */
+.service-box {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  margin: 0;
+}
+.service-box img {
+  width: 100%;
+  height: 100%; /* İstenen gereksinim: Width/Height ne olursa olsun fotoların tam görünmesi */ /* object-fit: cover, en boy oranını koruyarak kutuyu tamamen doldurur (kırpma olabilir) */ /* object-fit: contain, tüm resmi gösterir, ancak boşluk kalabilir. */ /* Kullanıcının orijinal kodu 'contain' içerdiği için ve "tam görünmesini sağla" talebi, cover (bütün kutuyu kapla) veya contain (bütün resmi göster) arasında bir seçim gerektirir. Burada en iyi görünüm için genellikle **cover** kullanılır. */
+  object-fit: cover;
+  display: block;
+} /* .service-box:nth-of-type(even) { transform: translateX(-400%); } */
+.combined-service.reverse .service-box {
+  order: 1;
+}
+.service-box.show {
+  transform: translateX(0);
+}
+.service-text-overlay {
+  /* Konumlandırma: Kapsayıcısı olan .service-box'a göre ayarlanır (ÇOK ÖNEMLİ) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px #000;
+  transition: background-color 0.3s ease;
+} /* service section */ /* !home end */
+.service-box:hover .service-text-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+} /* --- Responsive Tasarım (Medya Sorguları) --- */
+@media (max-width: 900px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    margin: 1rem 5%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  } /* Mobil menü açılır kapanır görünüm */
+  .combined-service,
+  .combined-service.reverse {
+    flex-direction: column !important;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 90%;
+
+    /* Mobil: Animasyonu yukarıdan gelmeye çevirdik */
+    transform: translateY(50px) !important;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  /* Mobil: Açıklama daima Görselin altında (order 2) kalır. */
+  .combined-service > .service-description-box,
+  .combined-service.reverse > .service-description-box {
+    order: 2;
+  }
+  /* Mobil: Görsel daima Açıklamanın üstünde (order 1) kalır. */
+  .combined-service > .service-box,
+  .combined-service.reverse > .service-box {
+    order: 1;
+    height: 250px;
+  }
+  .header .navbar {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease;
+    z-index: 999;
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 0.1rem solid var(--light-bg);
+    text-align: center;
+  }
+  .header .navbar a:hover {
+    background: var(--light-bg);
+  } /* Hizmet Kutuları Mobil Düzen */
+  .combined-service {
+    /* Mobil cihazlarda 'flex-direction: column' olarak ayarlanır */
+    flex-direction: column;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 90%; /* Animasyonu yukarıdan gelmeye çevirdik */
+    transform: translateY(50px) !important;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .combined-service.show {
+    transform: translateY(0) !important;
+    opacity: 1;
+  } /* *** DÜZENLEME BAŞLANGIÇ *** Bu bloktaki 'order' ve 'flex-direction: column' kurallarını siliyoruz. Bu sayede: 1. '.combined-service' (Normal): flex-direction: column (Resim üstte, Açıklama altta) 2. '.combined-service.reverse' (Ters): flex-direction: column-reverse (Açıklama üstte, Resim altta) Mobil cihazlarda alternatif düzen korunmuş olur. */
+  .combined-service.reverse {
+    flex-direction: column-reverse; /* Ters Sırada Açıklama üste, Resim alta gelir */
+  }
+  .service-box {
+    height: 250px;
+  } /* *** DÜZENLEME BİTİŞİ *** */
+  .home .content {
+    margin-left: 5%;
+  }
+  .home .content h3 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .home .content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .home .content h3 {
+    font-size: 4rem;
+  }
+  .service-section {
+    padding: 5rem 0;
+  }
+}
+/* footer start */
+footer {
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  width: 100%;
+  color: white;
+  position: absolute;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+}
+.footer-logo img {
+  width: 60px;
+  height: 60px;
+}
+.footer-content {
+  display: flex; /* Flexbox'u etkinleştir */
+  justify-content: center; /* İçindeki tüm sütunları/elementleri yatayda ortala */
+  align-items: center; /* İçindeki tüm sütunları/elementleri dikeyde ortala */
+  min-height: 100px; /* İçeriğin ortalanabilmesi için gerekli minimum yükseklik */
+}
+footer p {
+  text-align: center;
+}
+/* footer end */
+/* projects main start */
+/* .project-container {
+  margin-top: 100px;
+} */
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.panel {
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+/* @media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+} */
+/* projects main end */
