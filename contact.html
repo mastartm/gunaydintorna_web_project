@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Günaydın Torna</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="extra-style.css" />
     <!-- Font Awesome CDN (Hamburger ikonu için) -->
     <link
       rel="stylesheet"
@@ -19,33 +20,70 @@
       <nav class="navbar">
         <a href="index.html">Ana Sayfa</a>
         <a href="projects.html">Projelerimiz</a>
-        <a href="#">Hakkımızda</a>
+        <a href="products.html">Ürünlerimiz</a>
         <a href="contact.html" class="active">İletişim</a>
       </nav>
       <div id="menu-btn" class="fas fa-bars"></div>
     </header>
+
     <section class="contact">
       <h1>Bize Ulaşın</h1>
       <div class="row">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d196.97529539529575!2d34.57358878130448!3d37.82272653303354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1764296745310!5m2!1str!2str"
-          width="300"
-          height="300"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+        <div>
+          <h2>İletişim Bilgileri</h2>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Adres: Niğde/Bor Kemerhisar Pazaryeri Şafaklar Sokak No:3
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            Telefon: <a href="tel:+905354415525">0535 441 55 25</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            E-posta: <a href="mailto:gunaydintornanigde@hotmail.com">gunaydintornanigde@hotmail.com</a>
+          </p>
+          <p>
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp: <a href="https://wa.me/905354415525" target="_blank" rel="noopener">Hemen Mesaj Gönder</a>
+          </p>
+        </div>
       </div>
     </section>
+
     <footer>
       <div class="footer-content">
-        <div class="col footer-logo"><img src="/imgs/logo.png" alt="" /></div>
+        <div class="col footer-logo"><img src="imgs/logo.png" alt="" /></div>
+        <div class="col footer-info">
+          <p><i class="fas fa-map-marker-alt"></i> Niğde/Bor Kemerhisar Pazaryeri Şafaklar Sokak No:3</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+905354415525">0535 441 55 25</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:gunaydintornanigde@hotmail.com">gunaydintornanigde@hotmail.com</a></p>
+        </div>
       </div>
-      <div>
-        <p>copyright 2026 Günaydın Torna - Developed By Burak Kaan Gök</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Günaydın Torna - Tüm hakları saklıdır.</p>
+        <p class="dev-credit">Developed By Burak Kaan Gök</p>
       </div>
     </footer>
+
+    <!-- WhatsApp yüzen buton -->
+    <a
+      href="https://wa.me/905354415525"
+      target="_blank"
+      rel="noopener"
+      class="whatsapp-float"
+      aria-label="WhatsApp ile iletişime geç"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="script.js"></script>
   </body>
 </html>

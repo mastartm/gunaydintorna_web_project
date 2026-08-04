@@ -394,3 +394,315 @@ footer p {
   }
 } */
 /* projects main end */
+/* ===== Manuel Proje Listesi ===== */
+.project-list-wrapper {
+  padding: 60px 8%;
+  background: #f8f8f8;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.project-info p {
+  color: #555;
+  line-height: 1.6;
+}
+/* =====================================================
+   GÜNAYDIN TORNA - EK STİL DOSYASI
+   Bu dosya style.css'i BOZMAZ, üzerine ekleme yapar.
+   Her HTML dosyasının <head> kısmında style.css'ten SONRA
+   bu dosyayı ekle:
+   <link rel="stylesheet" href="extra-style.css" />
+===================================================== */
+
+/* ----- 1) DAHA OKUNAKLI FONT ----- */
+/* Google Fonts importu (Poppins - temiz ve okunaklı) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, button, input, textarea, li {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+}
+
+body {
+  line-height: 1.7;
+  color: #333;
+}
+
+p {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.3px;
+}
+
+/* ----- 2) WHATSAPP YÜZEN BUTON (sabit, scroll ile hareket etmez, hep görünür) ----- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+.whatsapp-float i {
+  pointer-events: none;
+}
+
+/* ----- 3) FOOTER DÜZENİ ----- */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8%;
+}
+
+.footer-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer-info i {
+  margin-right: 8px;
+  color: #25d366;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 12px 4% 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 10px;
+}
+
+.footer-bottom .dev-credit {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* ----- 4) İLETİŞİM SAYFASI HİZALAMA ----- */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 5%;
+}
+
+.contact .row iframe {
+  flex: 1 1 400px;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact .row > div:not(iframe) {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact .row h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.contact .row p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.contact .row p i {
+  width: 22px;
+  color: #25d366;
+  margin-right: 6px;
+}
+
+.contact .row p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact .row p a:hover {
+  color: #25d366;
+}
+
+/* =====================================================
+   5) RESPONSIVE (MOBİL UYUM)
+===================================================== */
+
+/* Tabletler */
+@media (max-width: 991px) {
+  .header {
+    padding: 15px 4%;
+  }
+
+  .navbar a {
+    font-size: 15px;
+    margin-left: 18px;
+  }
+
+  .service-section h3,
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Telefonlar / hamburger menü aktif alan */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 90px 30px;
+    gap: 20px;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .combined-service {
+    flex-direction: column !important;
+  }
+
+  .service-box,
+  .service-description-box {
+    width: 100%;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .row iframe {
+    min-height: 260px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+    bottom: 18px;
+    right: 18px;
+  }
+}
+
+/* Küçük telefonlar */
+@media (max-width: 480px) {
+  .content h3 {
+    font-size: 1.6rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-info p {
+    font-size: 0.85rem;
+  }
+}

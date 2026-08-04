@@ -1,59 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Günaydın Torna</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">
-        <img src="imgs/logo.png" alt="logo" />
-      </a>
-      <nav class="navbar">
-        <a href="index.html" >Ana Sayfa</a>
-        <a href="projects.html" class="active">Projelerimiz</a>
-        <a href="#">Hakkımızda</a>
-        <a href="contact.html">İletişim</a>
-      </nav>
-      <!-- Menü Butonu (Hamburger İkonu) Eklendi -->
-      <div id="menu-btn" class="fas fa-bars"></div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Günaydın Torna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="extra-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
 
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="imgs/logo.png" alt="logo" />
+    </a>
+    <nav class="navbar">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="projects.html" class="active">Projelerimiz</a>
+      <a href="products.html">Ürünlerimiz</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
 
-      <div class="projects-wrapper">
-        <div class="container">
-          <div
-            class="panel active"
-            style="background-image: url(/imgs/seyyar1.jpg)"> 
+  <div class="projects-wrapper">
+    <div class="container">
+      <div class="panel active" style="background-image: url(imgs/projects/seyyar1.jpg)"></div>
+      <div class="panel" style="background-image: url(imgs/projects/seyyar2.jpg)"></div>
+      <div class="panel" style="background-image: url(imgs/projects/seyyar3.jpg)"></div>
+      <div class="panel" style="background-image: url(imgs/projects/seyyar4.jpg)"></div>
+      <div class="panel" style="background-image: url(imgs/projects/seyyar5.jpeg)"></div>
+    </div>
+  </div>
+  <!-- panels end -->
+
+  <!-- ============================= -->
+  <!-- MANUEL PROJE LİSTESİ BAŞLANGIÇ -->
+  <!-- ============================= -->
+  <div class="project-list-wrapper">
+    <div class="container">
+      <h2 class="section-title">Tamamlanan Projelerimiz</h2>
+    </div>
+    <div>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="imgs/projects/project2.jpeg" alt="Proje 1" />
+          <div class="project-info">
+            <h3>Hatay/Hassa İçme Suyu Altyapı Projesi</h3>
+            <p>
+              İçme suyu altyapı projesi kapsamında, Hatay/Hassa bölgesinde gerçekleştirilen çalışmalar, suyun güvenli ve
+              temiz bir şekilde dağıtılmasını sağlamak amacıyla titizlikle yürütülmüştür. Proje süresince kullanılan
+              malzemeler, dayanıklılık ve hijyen standartlarına uygun olarak seçilmiş olup, teslim süreci 3 ay
+              içerisinde tamamlanmıştır.
+            </p>
           </div>
-          <div class="panel" style="background-image: url(/imgs/seyyar2.jpg)">
-            
+        </div>
+
+        <div class="project-item">
+          <img src="imgs/projects/project3.jpeg" alt="Proje 2" />
+          <div class="project-info">
+            <h3>Isparta Gelendost İçme Suyu Altyapı Projesi</h3>
+            <p>
+              Isparta Gelendost bölgesinde gerçekleştirilen İçme Suyu Altyapı Projesi, bölge halkının güvenli ve temiz
+              bir şekilde suya erişebilmesini sağlamak amacıyla başlatılmıştır. Proje süresince kullanılan malzemeler,
+              dayanıklılık ve hijyen standartlarına uygun olarak seçilmiş olup, teslim süreci 2 ay içerisinde
+              tamamlanmıştır.
+            </p>
           </div>
-          <div class="panel" style="background-image: url(imgs/seyyar3.jpg)">
-            
-          </div>
-          <div class="panel" style="background-image: url(imgs/seyyar4.jpg)">
-            
+        </div>
+
+        <div class="project-item">
+          <img src="imgs/projects/project4.jpeg" alt="Proje 3" />
+          <div class="project-info">
+            <h3>Gaziantep/Islahiye Terfi Merkezi Projesi</h3>
+            <p>
+              Gaziantep/Islahiye bölgesinde gerçekleştirilen Terfi Merkezi Projesi, bölge halkının güvenli ve temiz bir
+              şekilde suya erişebilmesini sağlamak amacıyla başlatılmıştır. Proje süresince kullanılan malzemeler,
+              dayanıklılık ve hijyen standartlarına uygun olarak seçilmiş olup, teslim süreci 2 ay içerisinde
+              tamamlanmıştır.
+            </p>
           </div>
         </div>
       </div>
-      <!-- panels end -->
-      <!-- footerstart -->
-      <footer>
-      <div class="footer-content">
-        <div class="col footer-logo"><img src="/imgs/logo.png" alt="" /></div>
+    </div>
+  </div>
+  <!-- ============================= -->
+  <!-- MANUEL PROJE LİSTESİ SON -->
+  <!-- ============================= -->
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer-content">
+      <div class="col footer-logo"><img src="imgs/logo.png" alt="" /></div>
+      <div class="col footer-info">
+        <p><i class="fas fa-map-marker-alt"></i> Niğde/Bor Kemerhisar Pazaryeri Şafaklar Sokak No:3</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+905354415525">0535 441 55 25</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:gunaydintornanigde@hotmail.com">gunaydintornanigde@hotmail.com</a></p>
       </div>
-      <div>
-        <p>copyright 2025 Günaydın Torna - Developed By Burak Kaan Gök</p>
-      </div>
-    </footer>
-      <script src="script.js"></script>
-    </header>
-  </body>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Günaydın Torna - Tüm hakları saklıdır.</p>
+      <p class="dev-credit">Developed By Burak Kaan Gök</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp yüzen buton -->
+  <a
+    href="https://wa.me/905354415525"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    aria-label="WhatsApp ile iletişime geç"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

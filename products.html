@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Günaydın Torna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="extra-style.css" />
+  <!-- Font Awesome CDN (Hamburger ikonu için) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="imgs/logo.png" alt="logo" />
+    </a>
+    <nav class="navbar">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="projects.html">Projelerimiz</a>
+      <a href="products.html" class="active">Ürünlerimiz</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+
+  <!-- ============================= -->
+  <!-- ÜRÜN LİSTESİ BAŞLANGIÇ -->
+  <!-- ============================= -->
+  <div class="project-list-wrapper">
+    <div class="container">
+      <h2 class="section-title">Ürünlerimiz</h2>
+    </div>
+    <div>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="imgs/products/product1.jpeg" alt="Ürün 1" />
+          <div class="project-info">
+            <h3>Pirinç Nipel</h3>
+            <p>
+              Pirinç nipel, sıhhi tesisat ve endüstriyel uygulamalarda kullanılan dayanıklı bir bağlantı elemanıdır. Korozyona
+              karşı dirençli yapısı sayesinde uzun ömürlü kullanım sağlar ve güvenli bağlantılar oluşturur.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="imgs/products/product2.jpg" alt="Ürün 2" />
+          <div class="project-info">
+            <h3>Paslanmaz Flanş Ve Fix Malzemeler</h3>
+            <p>
+              Paslanmaz flanş ve fix malzemeler, endüstriyel tesislerde güvenli ve sızdırmaz bağlantılar sağlamak için tercih edilen
+              dayanıklı ürünlerdir. Korozyona karşı dirençli yapıları sayesinde uzun ömürlü kullanım sunar.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="imgs/products/product3.jpeg" alt="Ürün 3" />
+          <div class="project-info">
+            <h3>Paslanmaz Boru Ve Ek Parçaları</h3>
+            <p>
+              304-316 kalite paslanmaz boru ve ek parçaları, endüstriyel uygulamalarda dayanıklılık ve hijyen sağlamak
+              için tercih edilen malzemelerdir. Bu ürünler, korozyona karşı dirençli olup uzun ömürlü kullanım sunar.
+            </p>
+          </div>
+        </div>
+
+        <!--
+            YENİ ÜRÜN EKLEMEK İÇİN:
+            Yukarıdaki .project-item bloklarından birini kopyala,
+            resim yolunu (src) ve içindeki başlık/açıklama metnini değiştir.
+          -->
+      </div>
+    </div>
+  </div>
+  <!-- ============================= -->
+  <!-- ÜRÜN LİSTESİ SON -->
+  <!-- ============================= -->
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer-content">
+      <div class="col footer-logo"><img src="imgs/logo.png" alt="" /></div>
+      <div class="col footer-info">
+        <p><i class="fas fa-map-marker-alt"></i> Niğde/Bor Kemerhisar Pazaryeri Şafaklar Sokak No:3</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+905354415525">0535 441 55 25</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:gunaydintornanigde@hotmail.com">gunaydintornanigde@hotmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Günaydın Torna - Tüm hakları saklıdır.</p>
+      <p class="dev-credit">Developed By Burak Kaan Gök</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp yüzen buton -->
+  <a
+    href="https://wa.me/905354415525"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    aria-label="WhatsApp ile iletişime geç"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
