@@ -1,4 +1,11 @@
+/* =====================================================
+   GÜNAYDIN TORNA - TEK, BİRLEŞTİRİLMİŞ STYLE.CSS
+   (@import kuralları CSS standardına göre dosyanın
+   EN BAŞINDA olmak zorunda, aksi halde tarayıcı görmezden gelir)
+===================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
   --primary-color: #072883; /* Ana Mavi renk */
   --secondary-color: #123e1b; /* Ana Yeşil renk */
@@ -7,15 +14,15 @@
   --light-bg: #f0f0f0;
 }
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize; /* Tüm geçişleri yavaşlattık */
-  transition: all 0.3s ease; /* bunu videoda kullanacaksın */
+  text-transform: capitalize;
+  transition: all 0.3s ease;
 }
 html {
   font-size: 62.5%;
@@ -25,14 +32,25 @@ html {
 }
 body {
   background: silver;
+  line-height: 1.7;
+  color: #333;
 }
 section {
   padding: 5rem 7%;
 }
+p {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+h1, h2, h3 {
+  letter-spacing: 0.3px;
+}
 .logo img {
   height: 5rem;
   border-radius: 30rem;
-} /* !header start */
+}
+
+/* !header start */
 .header {
   background-color: white;
   display: flex;
@@ -41,9 +59,9 @@ section {
   padding: 0 7%;
   margin: 2rem 7%;
   border-radius: 30rem;
-  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.75); /* navbarın sayfayı sürüklesek bile aşağıya doğru inmesini sağlar */
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.75);
   position: sticky;
-  top: 0; /* navbarın öncelikli olarak görünmesini sağlar */
+  top: 0;
   z-index: 1000;
 }
 .header .navbar a {
@@ -62,11 +80,14 @@ section {
   color: var(--primary-color);
   cursor: pointer;
   display: none; /* Büyük ekranda gizli */
-} /* !header end */ /* !home start */
+}
+/* !header end */
+
+/* !home start */
 .home {
-  min-height: 100vh; /* Arka planı tam ekran yapmak için min-height'ı 100vh'ye çıkarmanız iyi olur. */ /* min-width: 100%; */
-  position: relative; /* İçindeki videoyu konumlandırmak için gereklidir */
-  overflow: hidden; /* Video konteyner dışına taşarsa gizler */ /* background: url(./imgs/fixed_video.mp4); */
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   margin-top: -14.31rem;
@@ -74,14 +95,14 @@ section {
   align-items: center;
 }
 .home-video {
-  position: absolute; /* .home div'ine göre konumlanır */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-position: center;
-  z-index: -1; /* Videoyu diğer içeriğin arkasına gönderir */
-  object-fit: cover; /* düzenlenebilir */
+  z-index: -1;
+  object-fit: cover;
 }
 .home .content {
   max-width: 60rem;
@@ -89,6 +110,7 @@ section {
   z-index: 1;
   text-align: left;
 }
+.home .content h1,
 .home .content h3 {
   font-size: 7rem;
   color: white;
@@ -120,19 +142,29 @@ section {
 .home .content .btn:hover {
   background: red;
   letter-spacing: 0.1rem;
-} /* service section */
+}
+/* !home end */
+
+/* service section */
 .service-section {
-  /* display: block varsayılan değerdir ancak emin olmak için belirtilebilir */ /* font-size: 7rem; */ /* display: block; */ /* position: relative; */ /* overflow: hidden; */
-  padding: 8rem 0; /* İçindeki .service-box'ları yatayda (sayfanın merkezine) hizalar */ /* text-align: center; */
+  padding: 8rem 0;
   background-color: silver;
 }
+.service-section h2,
 .service-section h3 {
   font-size: 4rem;
   color: black;
-  margin-bottom: 3rem;
-  text-align: center;
   margin-bottom: 5rem;
-  font-weight: 700; /* text-transform: uppercase; */
+  text-align: center;
+  font-weight: 700;
+}
+.service-intro {
+  max-width: 800px;
+  margin: -3rem auto 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #444;
+  line-height: 1.8;
 }
 .combined-service {
   display: flex;
@@ -146,19 +178,19 @@ section {
   border-radius: 12px;
   border: 3px solid var(--primary-color);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-  overflow: hidden; /* Animasyon Başlangıç Ayarları */
+  overflow: hidden;
   opacity: 0;
-  transform: translateX(-100%); /* Varsayılan: Soldan gelmek için solda gizli */
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Yumuşak ve profesyonel bir geçiş */
-} /* TERS SIRA (Sağdan Gelenler) Animasyon Başlangıcı */
+  transform: translateX(-100%);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 .combined-service.reverse {
   flex-direction: row-reverse;
-  transform: translateX(100%); /* Sağdan gelmek için sağda gizli */
-} /* GÖRÜNÜR DURUM */
+  transform: translateX(100%);
+}
 .combined-service.show {
-  transform: translateX(0); /* Normal pozisyonuna geri döner */
-  opacity: 1; /* Görünür hale gelir */
-} /* --- İÇ KUTU STİLLERİ --- */ /* Açıklama Kutusu Stili */
+  transform: translateX(0);
+  opacity: 1;
+}
 .service-description-box {
   flex: 1 1 50%;
   display: flex;
@@ -180,7 +212,7 @@ section {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.5rem;
-} /* 2. Servis Kutuları (.service-box) Ayarları */
+}
 .service-box {
   flex: 1 1 50%;
   position: relative;
@@ -190,10 +222,10 @@ section {
 }
 .service-box img {
   width: 100%;
-  height: 100%; /* İstenen gereksinim: Width/Height ne olursa olsun fotoların tam görünmesi */ /* object-fit: cover, en boy oranını koruyarak kutuyu tamamen doldurur (kırpma olabilir) */ /* object-fit: contain, tüm resmi gösterir, ancak boşluk kalabilir. */ /* Kullanıcının orijinal kodu 'contain' içerdiği için ve "tam görünmesini sağla" talebi, cover (bütün kutuyu kapla) veya contain (bütün resmi göster) arasında bir seçim gerektirir. Burada en iyi görünüm için genellikle **cover** kullanılır. */
+  height: 100%;
   object-fit: cover;
   display: block;
-} /* .service-box:nth-of-type(even) { transform: translateX(-400%); } */
+}
 .combined-service.reverse .service-box {
   order: 1;
 }
@@ -201,7 +233,6 @@ section {
   transform: translateX(0);
 }
 .service-text-overlay {
-  /* Konumlandırma: Kapsayıcısı olan .service-box'a göre ayarlanır (ÇOK ÖNEMLİ) */
   position: absolute;
   top: 0;
   left: 0;
@@ -218,10 +249,207 @@ section {
   background-color: rgba(0, 0, 0, 0.6);
   text-shadow: 2px 2px 4px #000;
   transition: background-color 0.3s ease;
-} /* service section */ /* !home end */
+}
 .service-box:hover .service-text-overlay {
   background-color: rgba(0, 0, 0, 0.3);
-} /* --- Responsive Tasarım (Medya Sorguları) --- */
+}
+
+/* footer start */
+footer {
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  width: 100%;
+  color: white;
+  position: relative;
+  padding: 60px 0 0;
+  border-top-left-radius: 125px;
+}
+.footer-logo img {
+  width: 60px;
+  height: 60px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8%;
+  min-height: 100px;
+}
+footer p {
+  text-align: center;
+}
+.footer-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+.footer-info i {
+  margin-right: 8px;
+  color: #25d366;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 12px 4% 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 10px;
+}
+.footer-bottom .dev-credit {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+/* footer end */
+
+/* projects/panels start */
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+}
+.panel {
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+.panel.active {
+  flex: 5;
+}
+/* projects/panels end */
+
+/* Manuel Proje / Ürün Listesi */
+.project-list-wrapper {
+  padding: 60px 8%;
+  background: #f8f8f8;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.project-item:hover {
+  transform: translateY(-5px);
+}
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.project-info {
+  padding: 20px;
+}
+.project-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #222;
+}
+.project-info p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* WhatsApp yüzen buton */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+.whatsapp-float i {
+  pointer-events: none;
+}
+
+/* İletişim sayfası hizalama */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 5%;
+}
+.contact .row iframe {
+  flex: 1 1 400px;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.contact .row > div:not(iframe) {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.contact .row h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+.contact .row p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+.contact .row p i {
+  width: 22px;
+  color: #25d366;
+  margin-right: 6px;
+}
+.contact .row p a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact .row p a:hover {
+  color: #25d366;
+}
+
+/* =====================================================
+   RESPONSIVE (MOBİL UYUM)
+===================================================== */
 @media (max-width: 900px) {
   #menu-btn {
     display: inline-block;
@@ -235,33 +463,39 @@ section {
     margin: 1rem 5%;
   }
 }
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
-  } /* Mobil menü açılır kapanır görünüm */
+  }
   .combined-service,
   .combined-service.reverse {
     flex-direction: column !important;
     padding: 0;
     margin: 30px auto;
     max-width: 90%;
-
-    /* Mobil: Animasyonu yukarıdan gelmeye çevirdik */
     transform: translateY(50px) !important;
     opacity: 0;
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
-  /* Mobil: Açıklama daima Görselin altında (order 2) kalır. */
   .combined-service > .service-description-box,
   .combined-service.reverse > .service-description-box {
     order: 2;
   }
-  /* Mobil: Görsel daima Açıklamanın üstünde (order 1) kalır. */
   .combined-service > .service-box,
   .combined-service.reverse > .service-box {
     order: 1;
     height: 250px;
   }
+  .combined-service.show {
+    transform: translateY(0) !important;
+    opacity: 1;
+  }
+  .combined-service.reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* Mobil hamburger menü: yukarıdan clip-path ile açılır (ORİJİNAL DAVRANIŞ) */
   .header .navbar {
     display: block;
     position: absolute;
@@ -287,394 +521,44 @@ section {
   }
   .header .navbar a:hover {
     background: var(--light-bg);
-  } /* Hizmet Kutuları Mobil Düzen */
-  .combined-service {
-    /* Mobil cihazlarda 'flex-direction: column' olarak ayarlanır */
-    flex-direction: column;
-    padding: 0;
-    margin: 30px auto;
-    max-width: 90%; /* Animasyonu yukarıdan gelmeye çevirdik */
-    transform: translateY(50px) !important;
-    opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
   }
-  .combined-service.show {
-    transform: translateY(0) !important;
-    opacity: 1;
-  } /* *** DÜZENLEME BAŞLANGIÇ *** Bu bloktaki 'order' ve 'flex-direction: column' kurallarını siliyoruz. Bu sayede: 1. '.combined-service' (Normal): flex-direction: column (Resim üstte, Açıklama altta) 2. '.combined-service.reverse' (Ters): flex-direction: column-reverse (Açıklama üstte, Resim altta) Mobil cihazlarda alternatif düzen korunmuş olur. */
-  .combined-service.reverse {
-    flex-direction: column-reverse; /* Ters Sırada Açıklama üste, Resim alta gelir */
-  }
+
   .service-box {
     height: 250px;
-  } /* *** DÜZENLEME BİTİŞİ *** */
+  }
   .home .content {
     margin-left: 5%;
   }
+  .home .content h1,
   .home .content h3 {
     font-size: 5rem;
   }
-}
-@media (max-width: 500px) {
-  html {
-    font-size: 50%;
+  .service-section h2,
+  .service-section h3 {
+    font-size: 2.8rem;
   }
-  .home .content {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .home .content h3 {
-    font-size: 4rem;
-  }
-  .service-section {
-    padding: 5rem 0;
-  }
-}
-/* footer start */
-footer {
-  background: linear-gradient(to right, #00093c, #2d0b00);
-  width: 100%;
-  color: white;
-  position: absolute;
-  padding: 100px 0 30px;
-  border-top-left-radius: 125px;
-}
-.footer-logo img {
-  width: 60px;
-  height: 60px;
-}
-.footer-content {
-  display: flex; /* Flexbox'u etkinleştir */
-  justify-content: center; /* İçindeki tüm sütunları/elementleri yatayda ortala */
-  align-items: center; /* İçindeki tüm sütunları/elementleri dikeyde ortala */
-  min-height: 100px; /* İçeriğin ortalanabilmesi için gerekli minimum yükseklik */
-}
-footer p {
-  text-align: center;
-}
-/* footer end */
-/* projects main start */
-/* .project-container {
-  margin-top: 100px;
-} */
-
-.container {
-  display: flex;
-  width: 90vw;
-  margin: 0 auto;
-}
-
-.panel {
-  background-size: cover;
-  object-fit: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  transition: all 700ms ease-in;
-}
-
-.panel.active {
-  flex: 5;
-}
-
-/* @media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
-} */
-/* projects main end */
-/* ===== Manuel Proje Listesi ===== */
-.project-list-wrapper {
-  padding: 60px 8%;
-  background: #f8f8f8;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.project-item {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
-}
-
-.project-item:hover {
-  transform: translateY(-5px);
-}
-
-.project-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.project-info {
-  padding: 20px;
-}
-
-.project-info h3 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-  color: #222;
-}
-
-.project-info p {
-  color: #555;
-  line-height: 1.6;
-}
-/* =====================================================
-   GÜNAYDIN TORNA - EK STİL DOSYASI
-   Bu dosya style.css'i BOZMAZ, üzerine ekleme yapar.
-   Her HTML dosyasının <head> kısmında style.css'ten SONRA
-   bu dosyayı ekle:
-   <link rel="stylesheet" href="extra-style.css" />
-===================================================== */
-
-/* ----- 1) DAHA OKUNAKLI FONT ----- */
-/* Google Fonts importu (Poppins - temiz ve okunaklı) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-body,
-h1, h2, h3, h4, h5, h6,
-p, a, button, input, textarea, li {
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
-}
-
-body {
-  line-height: 1.7;
-  color: #333;
-}
-
-p {
-  line-height: 1.8;
-  letter-spacing: 0.2px;
-}
-
-h1, h2, h3 {
-  letter-spacing: 0.3px;
-}
-
-/* ----- 2) WHATSAPP YÜZEN BUTON (sabit, scroll ile hareket etmez, hep görünür) ----- */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25d366;
-  color: #fff;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  color: #fff;
-}
-
-.whatsapp-float i {
-  pointer-events: none;
-}
-
-/* ----- 3) FOOTER DÜZENİ ----- */
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 8%;
-}
-
-.footer-info p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-}
-
-.footer-info i {
-  margin-right: 8px;
-  color: #25d366;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 12px 4% 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 10px;
-}
-
-.footer-bottom .dev-credit {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  margin-top: 6px;
-}
-
-/* ----- 4) İLETİŞİM SAYFASI HİZALAMA ----- */
-.contact .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 5%;
-}
-
-.contact .row iframe {
-  flex: 1 1 400px;
-  width: 100%;
-  min-height: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.contact .row > div:not(iframe) {
-  flex: 1 1 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.contact .row h2 {
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-}
-
-.contact .row p {
-  margin: 10px 0;
-  font-size: 1rem;
-}
-
-.contact .row p i {
-  width: 22px;
-  color: #25d366;
-  margin-right: 6px;
-}
-
-.contact .row p a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.contact .row p a:hover {
-  color: #25d366;
-}
-
-/* =====================================================
-   5) RESPONSIVE (MOBİL UYUM)
-===================================================== */
-
-/* Tabletler */
-@media (max-width: 991px) {
-  .header {
-    padding: 15px 4%;
-  }
-
-  .navbar a {
-    font-size: 15px;
-    margin-left: 18px;
-  }
-
-  .service-section h3,
-  .section-title {
-    font-size: 1.8rem;
-  }
-}
-
-/* Telefonlar / hamburger menü aktif alan */
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    max-width: 300px;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 90px 30px;
-    gap: 20px;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s ease;
-    z-index: 1000;
-  }
-
-  .navbar.active {
-    right: 0;
-  }
-
-  #menu-btn {
-    display: inline-block;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .combined-service {
-    flex-direction: column !important;
-  }
-
-  .service-box,
-  .service-description-box {
-    width: 100%;
+  .service-intro {
+    font-size: 1.4rem;
+    padding: 0 5%;
   }
 
   .project-list {
     grid-template-columns: 1fr !important;
   }
-
   .contact .row {
     flex-direction: column;
     align-items: center;
   }
-
   .contact .row iframe {
     min-height: 260px;
   }
-
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
-
+  .footer-info p {
+    text-align: center;
+  }
   .whatsapp-float {
     width: 52px;
     height: 52px;
@@ -684,24 +568,27 @@ h1, h2, h3 {
   }
 }
 
-/* Küçük telefonlar */
-@media (max-width: 480px) {
-  .content h3 {
-    font-size: 1.6rem;
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
   }
-
-  .content p {
-    font-size: 0.95rem;
+  .home .content {
+    text-align: center;
+    margin: 0 auto;
   }
-
+  .home .content h1,
+  .home .content h3 {
+    font-size: 4rem;
+  }
+  .service-section {
+    padding: 5rem 0;
+  }
   .section-title {
     font-size: 1.5rem;
   }
-
   .project-info h3 {
     font-size: 1.1rem;
   }
-
   .footer-info p {
     font-size: 0.85rem;
   }
