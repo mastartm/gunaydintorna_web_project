@@ -34,6 +34,9 @@ body {
   background: silver;
   line-height: 1.7;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 section {
   padding: 5rem 7%;
@@ -262,6 +265,7 @@ footer {
   position: relative;
   padding: 60px 0 0;
   border-top-left-radius: 125px;
+  margin-top: auto;
 }
 .footer-logo img {
   width: 60px;
